@@ -11,7 +11,7 @@ libraryDependencies ++= Seq(
    "org.apache.spark" % "spark-sql_2.11" % "2.1.1" % "provided"
   ,"com.typesafe" % "config" % "1.3.1"
   ,"com.typesafe.scala-logging" %% "scala-logging" % "3.7.2"
-  ,"org.json4s" % "json4s-jackson_2.11" % "3.5.2"
+  ,"org.json4s" % "json4s-jackson_2.11" % "3.2.11"
   ,"org.scalatest" % "scalatest_2.11" % "3.0.3" % "test"
 )
 
@@ -27,7 +27,3 @@ assemblyMergeStrategy in assembly := {
     val oldStrategy = (assemblyMergeStrategy in assembly).value
     oldStrategy(x)
 }
-
-assemblyShadeRules in assembly := Seq(
-  ShadeRule.rename("org.json4s.**" -> "shadeio.@1").inLibrary("org.json4s" % "json4s-jackson_2.11" % "3.5.2").inProject
-)
