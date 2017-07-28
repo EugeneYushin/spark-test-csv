@@ -37,7 +37,7 @@ Config file: [application.conf](./src/main/resources/application.conf)
 ##### Notes
 Spark2+ csv plugin treat empty string as NULL field. Spark2 doesn't respect `treatEmptyValuesAsNulls` option, while 1.6 does. There's no way to change this behavior out-of-the-box. 
 
-Please refer the following threads for more details:
-https://issues.apache.org/jira/browse/SPARK-17916
-https://issues.apache.org/jira/browse/SPARK-15125
+Please refer the following threads for more details:  
+https://issues.apache.org/jira/browse/SPARK-17916  
+https://issues.apache.org/jira/browse/SPARK-15125  
 https://github.com/apache/spark/pull/12904
